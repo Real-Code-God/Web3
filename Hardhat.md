@@ -76,15 +76,15 @@ const { expect } = require("chai");
 
 describe("MyContract", function() {
 
-&#x20; it("should return correct value", async function() {
+   it("should return correct value", async function() {
 
-&#x20;   const Contract = await ethers.getContractFactory("MyContract");
+     const Contract = await ethers.getContractFactory("MyContract");
 
-&#x20;   const contract = await Contract.deploy();
+     const contract = await Contract.deploy();
 
-&#x20;   expect(await contract.getValue()).to.equal(0);
+     expect(await contract.getValue()).to.equal(0);
 
-&#x20; });
+   });
 
 });
 ```
@@ -98,13 +98,13 @@ describe("MyContract", function() {
 ```
 async function main() {
 
-&#x20; const Contract = await ethers.getContractFactory("MyContract");
+   const Contract = await ethers.getContractFactory("MyContract");
 
-&#x20; const contract = await Contract.deploy();
+   const contract = await Contract.deploy();
 
-&#x20; await contract.deployed();
+   await contract.deployed();
 
-&#x20; console.log("Contract deployed to:", contract.address);
+   console.log("Contract deployed to:", contract.address);
 
 }
 
@@ -120,11 +120,11 @@ main().catch(console.error);
 ```
 task("deploy:batch", "Deploy multiple contracts")
 
-&#x20; .setAction(async (taskArgs, hre) => {
+   .setAction(async (taskArgs, hre) => {
 
-&#x20;   // 部署逻辑
+     // 部署逻辑
 
-&#x20; });
+   });
 ```
 
 执行：`npx hardhat deploy:batch`
